@@ -95,24 +95,23 @@ function checkIfReady(){
         makeReady.classList.remove("hidden");
         hideNotReady.classList.add("hidden");
     }
-
-    //Updates the WhatsApp message
-    message();
 }
-function message(){
+function checkout(){
+    //Asks for the name and address for the delivery
+    const clientName = prompt("Qual é o seu nome?");
+    const clientAddress = prompt("Qual é o endereço da entrega?");
+
     //Will update the final Price of the order and convert it to the format (1.23)
     totalPrice = dishPrice + drinkPrice + dessertPrice;
     totalPrice = Number(totalPrice).toFixed(2);
 
     //Converts the order into a URL to send to WhatsApp
-    let text = encodeURIComponent("Olá, gostaria de fazer o pedido:#- Prato: " + dishName + "#- Bebida: " + drinkName + "#- Sobremesa: " + dessertName + "#Total: R$ " + totalPrice);
+    let text = encodeURIComponent("Olá, gostaria de fazer o pedido:§- Prato: " + dishName + "§- Bebida: " + drinkName + "§- Sobremesa: " + dessertName + "§Total: R$ " + totalPrice + "§§Nome: " + clientName + "§Endereço: " + clientAddress);
     
-    //After converting every "#" to "%23", this one will turn it into "%0A" so the message can have the line breaks
-    text = text.replace(/%23/g, "%0A");
-    document.querySelector(".whatsapp").href = "http://wa.me/5532988352666?text=" + text;
+    //After converting every "§" to "%C2%A7", this one will turn it into "%0A" so the message can have the line breaks
+    text = text.replace(/%C2%A7/g, "%0A");
+    window.open("http://wa.me/5532988352666?text=" + text, "_blank");
 }
-
-
 let dishName;
 let dishPrice;
 let drinkName;
