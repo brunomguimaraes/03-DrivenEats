@@ -4,6 +4,10 @@ body {
     background-color: #EEEEEE;
     margin: 96px 0px;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 
 .top-bar {
