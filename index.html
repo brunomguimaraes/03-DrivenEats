@@ -62,6 +62,15 @@
                 <p class="price">R$ 14,40</p>
                 <ion-icon name="checkmark-circle" class="hidden checkmark"></ion-icon>
             </div>
+            <div class="option peixe" onclick="dishSelection('peixe')">
+                <div>
+                    <img src="/media/pratos/peixe.jpeg" alt="Peixe à Milanesa">
+                    <h3>Filé de Peixe à Milanesa</h3>
+                    <p class="description">Arroz, fritas, filé de peixe à milanesa e salada.</p>
+                </div>
+                <p class="price">R$ 19,90</p>
+                <ion-icon name="checkmark-circle" class="hidden checkmark"></ion-icon>
+            </div>
             <div class="dummy"></div>
         </div>
     </div>
@@ -102,6 +111,15 @@
                     <p class="description">Garaffa de 450ml sabor limão.</p>
                 </div>
                 <p class="price">R$ 6,00</p>
+                <ion-icon name="checkmark-circle" class="hidden checkmark"></ion-icon>
+            </div>
+            <div class="option agua" onclick="drinkSelection('agua')">
+                <div>
+                    <img src="/media/bebidas/agua.jpeg" alt="Água Mineral">
+                    <h3>Água Mineral Crystal</h3>
+                    <p class="description">Garaffa de 500ml sem gás.</p>
+                </div>
+                <p class="price">R$ 1,00</p>
                 <ion-icon name="checkmark-circle" class="hidden checkmark"></ion-icon>
             </div>
             <div class="dummy"></div>
@@ -155,6 +173,15 @@
                 <p class="price">R$ 5,00</p>
                 <ion-icon name="checkmark-circle" class="hidden checkmark"></ion-icon>
             </div>
+            <div class="option Gelatina" onclick="dessertSelection('Gelatina')">
+                <div>
+                    <img src="/media/sobremesas/gelatina.jpeg" alt="Gelatina de Morango Recheada">
+                    <h3>Gelatina de Morango Recheada</h3>
+                    <p class="description">Nossa famosa gelatina recheada de leite condensado.</p>
+                </div>
+                <p class="price">R$ 2,50</p>
+                <ion-icon name="checkmark-circle" class="hidden checkmark"></ion-icon>
+            </div>
             <div class="dummy"></div>
         </div>
     </div>
@@ -162,8 +189,40 @@
         <div class="not-ready">
             Selecione os 3 itens para fechar o pedido
         </div>
-        <div class="ready hidden" onclick="checkout()">
+        <div class="ready hidden" onclick="confirmOrder()">
             Finalizar Pedido
+        </div>
+    </div>
+    <div class="checkout-window hidden">
+        <div class="checkout-box">
+            <span class="confirmation-top">Confirme seu pedido</span>
+            <div class="items">
+                <div class="dish">
+                    <span class="dish-name"></span>
+                    <span class="dish-price"></span>
+                </div>
+                <div class="drink">
+                    <span class="drink-name"></span>
+                    <span class="drink-price"></span>
+                </div>
+                <div class="dessert">
+                    <span class="dessert-name"></span>
+                    <span class="dessert-price"></span>
+                </div>
+                
+            </div>
+            <div class="total">
+                <span>TOTAL</span>
+                <span class="total-price"></span>
+            </div>
+            <div>
+                <div class="confirmation" onclick="checkout()">
+                    <span>Tudo certo, pode pedir!</span>
+                </div>
+                <div class="cancel" onclick="confirmOrder()">
+                    <span>Cancelar</span>
+                </div>
+            </div>
         </div>
     </div>
 

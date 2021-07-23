@@ -4,10 +4,6 @@ body {
     background-color: #EEEEEE;
     margin: 96px 0px;
 }
-a {
-    text-decoration: none;
-    color: inherit;
-}
 
 
 .top-bar {
@@ -15,7 +11,7 @@ a {
     width: 100vw;
     padding: 12px 24px;
     background-color: #CF2B2B;
-    box-shadow: 0px 4px 4px #aaaaaa;
+    box-shadow: 0px 4px 4px #00000040;
 
     position: fixed;
     top: 0;
@@ -56,7 +52,7 @@ a {
     min-width: 172px;
     border-radius: 9px;
     background-color: #ffffff;
-    box-shadow: 0px 0px 4px #cecece;
+    box-shadow: 0px 0px 10px #00000040;
 
     display: flex;
     justify-content: space-between;
@@ -161,6 +157,83 @@ a {
     font-size: 22px;
     color: #32B72F;
 }
+
+
+.checkout-window {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.9);
+    display: flex;
+}
+.checkout-box {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: auto;
+    padding: 0px 24px;
+    width: calc(100% - 40px);
+    background-color: #50D074;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px #00000040;
+    box-sizing: border-box;
+}
+.items div {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+.confirmation-top {
+    font-family: roboto;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 20px auto;
+}
+.items {
+    font-family: roboto;
+    font-size: 22px;
+    font-weight: 300;
+    color: #ffffff;
+}
+.total {
+    font-family: roboto;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+.confirmation {
+    height: 52px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+
+    font-family: roboto;
+    font-size: 22px;
+    font-weight: 700;
+    color: #50D074;
+}
+.cancel {
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: roboto;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+
 .hidden {
     display: none;
 }
